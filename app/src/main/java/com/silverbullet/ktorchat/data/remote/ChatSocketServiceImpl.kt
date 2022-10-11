@@ -23,7 +23,7 @@ class ChatSocketServiceImpl(
         return try {
             socket = client
                 .webSocketSession {
-                    url(ChatSocketService.EndPoints.ChatSocketRoute.url)
+                    url("${ChatSocketService.EndPoints.ChatSocketRoute.url}?username=$username")
                 }
             if (socket?.isActive == true) {
                 Resource.Success(Unit)
