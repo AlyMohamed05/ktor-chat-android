@@ -6,8 +6,9 @@ import com.silverbullet.ktorchat.domain.model.Message
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
+import javax.inject.Inject
 
-class MessagingServiceImpl(
+class MessagingServiceImpl @Inject constructor(
     private val client: HttpClient
 ) : MessagingService {
 

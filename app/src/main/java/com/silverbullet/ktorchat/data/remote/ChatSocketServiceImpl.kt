@@ -12,8 +12,9 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.isActive
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
+import javax.inject.Inject
 
-class ChatSocketServiceImpl(
+class ChatSocketServiceImpl @Inject constructor(
     private val client: HttpClient
 ) : ChatSocketService {
 

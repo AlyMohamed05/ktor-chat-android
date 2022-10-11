@@ -21,7 +21,6 @@ object AppModule {
     @Singleton
     fun provideHttpClient(): HttpClient {
         return HttpClient(CIO) {
-            install(Logging)
             install(WebSockets)
             install(ContentNegotiation) {
                 json(
